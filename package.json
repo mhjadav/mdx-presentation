@@ -1,0 +1,16 @@
+{
+  "name": "tech-huddle-cypress",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "mdx-deck": "^4.1.1"
+  },
+  "scripts": {
+    "start": "mdx-deck slides.mdx"
+  },
+  "dependencies": {
+    "@noon/atom": "^3.2.0",
+    "@noon/quark": "^3.2.3"
+  }
+}

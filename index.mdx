@@ -1,0 +1,200 @@
+import Layout from './components/Layout'
+import { themes } from 'mdx-deck'
+import { IconLogo } from '@noon/quark'
+
+export const theme = {
+...themes.swiss,
+...themes.syntaxHighlighter,
+}
+
+<Footer>
+<div style={{
+        width: '95vw',
+        height: '50px',
+    }}>
+    <IconLogo />
+    <span style={{ margin: "0 10px" }}>The Social Learning Company</span>
+</div>
+</Footer>
+
+<Header>
+<div
+    style={{
+        width: '95vw',
+        height: '50px',
+        display: 'flex',
+        flex: 'row nowrap',
+        justifyContent: 'end',
+        alignContent: 'center'
+    }}
+    >
+    <svg  version="1.1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" width="150px" height="50px" viewBox="0 0 140 64"><path d="M57.274 21.334c-5.859 0-10.606 4.7-10.606 10.5s4.747 10.5 10.606 10.5c5.858 0 10.605-4.7 10.605-10.5s-4.751-10.5-10.605-10.5z" fill="#64D8AE"></path><path d="M57.112 36.865c3.241 3.091 8.535 3.108 11.755 0 .5-.483-.318-1.134-.776-.693-2.821 2.726-7.356 2.71-10.203 0-.462-.44-1.28.21-.776.693z" fill="#151515"></path><path d="M82.73 21.334c-5.858 0-10.605 4.7-10.605 10.5s4.747 10.5 10.606 10.5c5.858 0 10.605-4.7 10.605-10.5s-4.751-10.5-10.605-10.5zm0 17.5c-3.902 0-7.071-3.132-7.071-7 0-3.869 3.165-7.002 7.072-7.002 3.903 0 7.071 3.133 7.071 7.002 0 3.868-3.169 7-7.071 7zm-50.914-17.5c-5.858 0-10.605 4.7-10.605 10.5v9.24c0 .462.382.84.848.84h1.837a.847.847 0 00.848-.84v-9.24c0-3.864 3.165-7.002 7.072-7.002 3.903 0 7.072 3.133 7.072 7.002v9.24c0 .462.382.84.848.84h1.837a.847.847 0 00.849-.84v-9.24c0-5.8-4.747-10.5-10.606-10.5zm76.368 0c-5.859 0-10.606 4.7-10.606 10.5v9.24c0 .462.382.84.849.84h1.837a.847.847 0 00.848-.84v-9.24c0-3.864 3.165-7.002 7.072-7.002 3.902 0 7.071 3.133 7.071 7.002v9.24c0 .462.382.84.849.84h1.837a.847.847 0 00.848-.84v-9.24c0-5.8-4.747-10.5-10.605-10.5z" fill="#141414"></path></svg>
+</div>
+</Header>
+
+# E2E Testing @ Noon
+
+<Layout>
+    <div style={{ margin: "40px 0"}}>
+        Hi, I am Mahipat Jadav
+        <p style={{ margin: 0 }}>
+            Softwar Engineer @ <b>Noon Academy, Bangalore</b>
+        </p>
+        <br />
+        <p>
+             Reach out to me @ <a style={{ color: 'lighgray' }} href="https://mojaave.com">mojaave.com</a>
+        </p>
+    </div>
+</Layout>
+
+---
+
+# Why do we need E2E testing (Cypress)
+
+<Steps>
+
+1. Catch issue at early stage
+
+2. Validate critical flows (like payment, groups, classrom)
+
+3. Less testing efforts every time before release
+
+</Steps>
+
+---
+
+# Little bit about Cypress
+<i>Install Node Module, Set up tests, Write tests, Run tests, Record tests</i>
+<Steps>
+
+1.  Cypress is javascript testing framework
+
+2.  Very easy to setup
+
+3.  Built on top of Mocha, jQuery 
+<i>Industry standard platforms, making it useful and usable across variety of apps</i>
+
+4.  Open source - Community support
+
+5.  Easy to debug with GUI tool
+
+</Steps>
+
+---
+
+# What are we have covered
+<i>Deployed in production</i>
+<Steps>
+
+1.  Landing page
+
+2.  Career page
+
+3.  Login page
+
+4.  Land on discovery
+
+5.  Group search
+
+6.  Group details page
+
+7.  Subscribe to group (free/paid)
+
+8.  Payment flow ( cash / credit card / fawry / easypaisa / razorpay )
+
+</Steps>
+
+---
+
+# What are we working on
+<i>In Progress</i>
+<Steps>
+
+1.  Teacher classroom
+
+2.  Create group
+
+2.  Group details test, skill, private
+
+</Steps>
+
+---
+
+# It's time it in action
+
+<i>Sample code</i>
+<pre style={{ background: 'black', color: 'white', padding: '20px', whiteSpace: 'pre-wrap' }}>
+<code>
+{`describe('Career page', () => {
+    it('Career page', () => {
+        cy.visit('/career');
+        cy.contains('The future of education').should('have.text', 'The future of education');
+        cy.wait(3000);
+        cy.contains('Open opportunities').should('have.text', 'Open opportunities');
+    });
+});`}
+</code>
+</pre>
+
+--- 
+
+# Bitbucket integration
+
+<Steps>
+
+1. Configured bitbucket pipeline
+
+2. Run only if PR created/updated to release Branche
+
+3. Using start-server-and-test(node_modules), start server with updated code locallly, and run cypress test
+
+4. Generate xml reports
+<pre>
+<code>
+{`<testsuites name="Mocha Tests" time="7.8170" tests="1" failures="0">
+    <testsuite name="Root Suite" timestamp="2021-06-18T03:59:58" tests="0" file="cypress/integration/career.spec.js" time="0.0000" failures="0">
+    </testsuite>
+    <testsuite name="Career page" timestamp="2021-06-18T03:59:58" tests="1" time="7.8170" failures="0">
+        <testcase name="Career page Career page" time="7.8170" classname="Career page">
+        </testcase>
+    </testsuite>
+</testsuites>`}
+</code>
+</pre>
+
+</Steps>
+
+---
+
+# Fail and Debug
+
+Let's see it in action
+
+1. Cypress dashboard
+2. Cypress GUI
+
+---
+
+# Summary
+
+**Combined Coverage Unit test + E2E test**
+
+<div>
+
+    Statements   : 40.11% ( 4513/11252 )
+
+    Branches     : 29.92% ( 2698/9018 )
+
+    Functions    : 33.49% ( 949/2834 )
+
+    Lines        : 40.82% ( 4253/10420 )
+
+</div>
+
+---
+
+# Thank you
+
+<p>
+    Reach out to me @ <a style={{ color: 'lighgray' }} href="https://mojaave.com">mojaave.com</a>
+</p>
