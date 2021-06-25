@@ -4,12 +4,12 @@
   "main": "index.js",
   "license": "MIT",
   "devDependencies": {
-    "mdx-deck": "^4.1.1"
+    "mdx-deck": "^4.1.1",
+    "react-syntax-highlighter": "^15.4.3"
   },
   "scripts": {
     "start": "mdx-deck index.mdx",
     "build": "mdx-deck build index.mdx"
   },
-  "dependencies": {
-  }
+  "dependencies": {}
 }
