@@ -72,7 +72,7 @@ colors: {
 
 1. Catch issue at early stage
 
-2. Validate critical flows (like payment, groups, classrom)
+2. Validate critical flows (like payment, groups, classroom)
 
 3. Less testing efforts every time before release
 
@@ -131,13 +131,13 @@ colors: {
 
 2.  Create group
 
-2.  Group details test, skill, private
+2.  Student - Group details test, skill, private
 
 </Steps>
 
 ---
 
-# It's time it in action
+# It's time see it in action
 
 <i>Sample code</i>
 <pre style={{ background: 'black', color: 'white', padding: '20px', whiteSpace: 'pre-wrap' }}>
@@ -161,11 +161,12 @@ colors: {
 
 1. Configured bitbucket pipeline
 
-2. Run only if PR created/updated to release Branche
+2. Run only if PR created/updated to release (destination branch) Branch
 
-3. Using start-server-and-test(node_modules), start server with updated code locallly, and run cypress test
+3. Using start-server-and-test(node_modules), start server with updated code locallly
+    <i>run test, generate report, record test result</i>
 
-4. Generate xml reports
+4. Generate failed test case xml reports
 <pre>
 <code>
 {`<testsuites name="Mocha Tests" time="7.8170" tests="1" failures="0">
